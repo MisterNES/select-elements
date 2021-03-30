@@ -62,4 +62,9 @@ window.addEventListener("DOMContentLoaded", event => {
     }
 
     setInterval(getTime, 1000);
+
+    document.getElementById("details").onclick = () => {
+        document.getElementById("details").textContent = "Happy to meet you!";
+        document.getElementById("details").style = "color: red";
+    }
 })
