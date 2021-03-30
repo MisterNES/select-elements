@@ -72,4 +72,17 @@ window.addEventListener("DOMContentLoaded", event => {
         document.getElementById("details").textContent = "Click me!";
         document.getElementById("details").style = "color: green";
     }
+
+    const deadline = new Date("dec 31, 2021 11:59:59").getTime();
+
+    let now = new Date().getTime();
+    let t = deadline - now;
+    let days = Math.floor(t / (1000 * 60 * 60 *24));
+    let hours = Math.floor((t % (1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+    let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+    let time2 = document.createElement('h2')
+    document.body.appendChild(time2);
+    time2.innerHTML = days + "d" + hours + "h" + minutes + "m" + seconds + "s";
 })
