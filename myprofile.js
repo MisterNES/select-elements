@@ -2,6 +2,7 @@ console.log("This is my profile page!");
 
 window.addEventListener("DOMContentLoaded", event => {
     let name = document.createElement("h1");
+    name.setAttribute("class", "name")
     name.innerText = "Nathan & Megan";
     document.body.appendChild(name);
 
@@ -28,6 +29,7 @@ window.addEventListener("DOMContentLoaded", event => {
 
     let list = document.createElement('ul');
     list.setAttribute('id', 'details');
+    list.setAttribute("class", "my-details")
     document.body.appendChild(list);
 
     const detailsArr = [
@@ -41,6 +43,12 @@ window.addEventListener("DOMContentLoaded", event => {
     const listElement = document.getElementById('details');
     listElement.innerHTML = liString;
 
-    
+    let details = document.querySelectorAll("li");
+    details.forEach((detail) => {
+        //detail.className = "detail";
+        detail.setAttribute("class", "detail");
+    });
+
+
 
 })
