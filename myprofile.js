@@ -49,6 +49,17 @@ window.addEventListener("DOMContentLoaded", event => {
         detail.setAttribute("class", "detail");
     });
 
+    let time = document.createElement('h2');
+    document.body.appendChild(time);
+    const getTime = () => {
+        const date = new Date();
+        const seconds = date.getSeconds();
+        const minutes = date.getMinutes();
+        const hours = date.getHours();
 
+        let titleText = `Meagan live in Nashville, TN and the time there is ${hours}:${minutes}:${seconds}.`
+        time.innerText = titleText;
+    }
 
+    setInterval(getTime, 1000);
 })
