@@ -67,4 +67,9 @@ window.addEventListener("DOMContentLoaded", event => {
         document.getElementById("details").textContent = "Happy to meet you!";
         document.getElementById("details").style = "color: red";
     }
+
+    document.getElementById('details').onmouseover = () => {
+        document.getElementById("details").textContent = "Click me!";
+        document.getElementById("details").style = "color: green";
+    }
 })
